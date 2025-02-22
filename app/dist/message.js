@@ -1,4 +1,4 @@
-const message = ["Jeongwon", "is", "a", "genius"];
+const message = ["Jeongwon", "is", "a", "genius", "OMG"];
 export {
   message
 };

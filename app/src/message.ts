@@ -1,1 +1,1 @@
-export const message = ["Jeongwon", "is", "a", "genius"];
+export const message = ["Jeongwon", "is", "a", "genius", "OMG"];
