@@ -6,6 +6,7 @@ export function makeApp() {
   // 앱을 생성
   const app = fastify({
     logger: true,
+    pluginTimeout: 60000,
   });
 
   // 플러그인을 등록

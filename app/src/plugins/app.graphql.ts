@@ -1,6 +1,5 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import type { FastifyInstance, FastifyRequest } from "fastify";
 import fp from "fastify-plugin";
 import { createSchema, createYoga } from "graphql-yoga";
 import type { Context } from "../graphql/Context";
