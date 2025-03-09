@@ -3,22 +3,20 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon",
-    "build": "node ./esbuild.config.js",
+    "build": "node ./esbuild.config.js && react-router build",
     "start": "node --import=extensionless/register ./dist/index.js"
   },
   "nodemonConfig": {
     "watch": "src",
-    "ignore": [
-      "dist/**",
-      "node_modules/**"
-    ],
-    "ext": "ts",
+    "ignore": ["dist/**", "node_modules/**", "src/web/**"],
+    "ext": "ts,tsx,graphql",
     "exec": "rm -rf ./dist && yarn node ./esbuild.config.js && yarn node --import=extensionless/register ./dist/index.js | yarn pino-pretty --singleLine"
   },
   "dependencies": {
     "@fastify/autoload": "^6.1.0",
     "@fastify/cors": "^10.0.2",
     "@fastify/env": "^5.0.2",
+    "@mcansh/remix-fastify": "^4.0.7",
     "@react-router/node": "^7.3.0",
     "@sinclair/typebox": "^0.34.27",
     "dotenv": "^16.4.7",

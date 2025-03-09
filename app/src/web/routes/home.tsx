@@ -1,4 +1,4 @@
-import { Welcome } from "../welcome/welcome";
+import type { Route } from "./+types/home";
 
 export function meta() {
   return [
@@ -7,6 +7,10 @@ export function meta() {
   ];
 }
 
+export function loader({ request, params, context }: Route.LoaderArgs) {
+  context.app.env.COOKIE_SECRET;
+}
+
 export default function Home() {
-  return <Welcome />;
+  return <div>Hellow World</div>;
 }
